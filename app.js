@@ -8,7 +8,7 @@ async function repo() {
     let response = await fetch(`https://api.github.com/users/${search.value}/repos`)
     let data = await response.json();
     console.log(data)
-
+    repolinks.innerHTML =""; 
     data.forEach(ele => {
         let a = document.createElement('a');
         a.href = ele.html_url;
